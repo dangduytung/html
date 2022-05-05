@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+
+        document.addEventListener("keydown", function (event) {
+
+            // Disable CtrlKey
+            if (event.ctrlKey) {
+                event.preventDefault();
+            }
+
+            // Disable F12
+            if (event.keyCode == 123) {
+                event.preventDefault();
+            }
+        });
+
+        // Disable mouse right click
+        document.addEventListener('contextmenu',
+            event => event.preventDefault()
+        );
+
+    </script>
+</head>
+
+<body>
+    <a href="https://billypentester.medium.com/how-to-hide-the-source-code-of-an-html-web-page-59a3c2e877b4"
+        target="_blank">https://billypentester.medium.com/how-to-hide-the-source-code-of-an-html-web-page-59a3c2e877b4</a>
+    <h2>Demo JavaScript in Head</h2>
+
+    <p id="demo">A Paragraph.</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+</body>
+
+</html>
