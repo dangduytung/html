@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowfall Effect</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        (function() {
+            function asyncLoad() {
+                var url = "../scripts/snowfall-effect.js";
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = url;
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+
+            if (window.attachEvent) {
+                window.attachEvent('onload', asyncLoad);
+            } else {
+                window.addEventListener('load', asyncLoad, false);
+            }
+        })();
+    </script>
+</body>
+</html>
